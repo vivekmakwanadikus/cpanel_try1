@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ftp.v4account.com
+        server: 148.66.137.21
         username: test_emaxicom_new@v4account.com
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
