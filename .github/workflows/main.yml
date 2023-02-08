@@ -1,4 +1,7 @@
-on: push
+on: 
+  push:
+    branches:
+      master
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -11,8 +14,8 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: 148.66.137.21
-        username: test_emaxicom_new@v4account.com
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
         port: 21 # todo replace with your web hosts ftps port
