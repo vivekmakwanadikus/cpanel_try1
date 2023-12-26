@@ -16,5 +16,5 @@ jobs:
       with:
         server: v4account.com
         username: sfa_udaan
-        password: !#AWcT49yi0rQmJg
+        password: ${{ secrets.password }}
         dry-run: true
